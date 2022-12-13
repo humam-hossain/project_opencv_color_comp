@@ -15,6 +15,8 @@ $ python main.py
 
 ## Limitations
 
+The two input images must have the same size/dimensions and also suffers from a few problems including scaling, translations, rotations, and distortions. For images that do not have the same dimensions, we must switch from identifying pixel-similarity to object-similarity using deep-learning feature models instead of comparing individual pixel values.
+
 ### Noise
 Noise exists in output
 
