@@ -28,9 +28,9 @@ def process(original, sample, bias=1000):
 
     results = [
         ["original", original],
+        ["sample", sample],
         ["diff", diff],
         ["thresh (THRESH_BINARY_INV)", thresh],
-        ["sample", sample],
         [f'Output, contour area > {bias}', filled_sample],
         [f'mask, contour area > {bias}', mask]
     ]
@@ -57,11 +57,11 @@ def process(original, sample, bias=1000):
 
             count = count + 1
     plt.tight_layout()
-    plt.savefig("ref")
+    plt.savefig("output_sample")
     plt.show()
-    
+
 original = cv.imread("../photos/tshirt_original.jpg")
-sample = cv.imread("../photos/tshirt_sample_2.jpg")
+sample = cv.imread("../photos/tshirt_sample_1.jpg")
 
 bias = 1000
 
