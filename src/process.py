@@ -61,7 +61,7 @@ def process(original, sample, bias=1000):
     plt.show()
     
 original = cv.imread("../photos/tshirt_original.jpg")
-sample = cv.imread("../photos/tshirt_sample_1.jpg")
+sample = cv.imread("../photos/tshirt_sample_2.jpg")
 
 bias = 1000
 
