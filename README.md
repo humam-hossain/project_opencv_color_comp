@@ -9,7 +9,9 @@ $ python main.py
 ```
 
 ## Sample Output
-![Output Sample]("../sample_outputs/output_sample.png")
-![Output Sample]("../sample_outputs/output_tshirt_sample_1.png")
-![Output Sample]("../sample_outputs/output_tshirt_sample_2.png")
-![Output Sample]("../sample_outputs/output_noise.png")
+![Output Sample](https://i.ibb.co/kx0vBWX/output-tshirt-sample-2.png)
+![Output Sample](https://i.ibb.co/qg1K4wF/output-tshirt-sample-1.png)
+![Output Sample](https://i.ibb.co/8zpVbZM/output-sample.png)
+
+### Noise
+![Output Noise](https://i.ibb.co/4jXSnzN/output-noise.png)
