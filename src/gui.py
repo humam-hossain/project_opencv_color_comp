@@ -3,20 +3,10 @@ from process import *
 import cv2 as cv
 import matplotlib.pyplot as plt
 from tkinter import *
-from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+from PIL import ImageTk, Image 
 
-def gui():
-    # root window
-    root = Tk()
-    root.title("Color Comparison by Pixel Similarity")
-    root.geometry("1080x610")
-
+def image_process(original, sample, bias):
     # img processing
-    original = cv.imread("../photos/tshirt_original.jpg")
-    sample = cv.imread("../photos/tshirt_sample_2.jpg")
-
-    bias = 1000
-
     (contours, images) = process(original, sample, bias)
     print("# of contours {contours}".format(contours = len(contours)))
 
@@ -42,11 +32,26 @@ def gui():
             ax.imshow(img)
 
             count = count + 1
-    plt.savefig(f'../outputs/sample')
-    plt.close(fig)
-    
-    # canvas = FigureCanvasTkAgg(fig, root)
-    # canvas.get_tk_widget().pack(side=LEFT, fill=BOTH)
+    plt.show()
+    plt.savefig(f'../outputs/sample_1')
+    # plt.close(fig)
+
+def gui():
+    # root window
+    root = Tk()
+    root.title("Color Comparison by Pixel Similarity")
+    root.geometry("1080x720")
+
+    # components
+    saved_outputs = ImageTk.PhotoImage(Image.open("../outputs/sample.png"))
+    outputs_label = Label(image=saved_outputs)
+    outputs_label.pack(side=LEFT)
+
+    # inputs
+    original = cv.imread("../photos/tshirt_original.jpg")
+    sample = cv.imread("../photos/tshirt_sample_2.jpg")
+
+    bias = 1000
 
     # show gui
     root.mainloop()
