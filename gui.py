@@ -33,7 +33,7 @@ def image_process(original, sample, bias):
 
             count = count + 1
     plt.show()
-    plt.savefig(f'../outputs/sample_1')
+    plt.savefig(f'outputs/sample')
     # plt.close(fig)
 
 def gui():

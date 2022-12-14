@@ -3,8 +3,7 @@
 ## Getting started
 
 ```
-$ pip install opencv-contrib-python numpy matplotlib Pillow
-$ cd src
+$ python build.py
 $ python main.py
 ```
 
