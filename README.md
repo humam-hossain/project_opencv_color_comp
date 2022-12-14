@@ -3,7 +3,7 @@
 ## Getting started
 
 ```
-$ pip install opencv-contrib-python
+$ pip install opencv-contrib-python numpy matplotlib Pillow
 $ cd src
 $ python main.py
 ```
